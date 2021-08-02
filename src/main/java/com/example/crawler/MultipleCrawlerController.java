@@ -17,8 +17,9 @@ public class MultipleCrawlerController {
         imageConfig.setCrawlStorageFolder(new File(crawlStorageBase, "image").getAbsolutePath());
         imageConfig.setIncludeBinaryContentInCrawling(true);
 
-        htmlConfig.setMaxPagesToFetch(1);
-        imageConfig.setMaxPagesToFetch(1);
+        // set số trang max crawl
+        htmlConfig.setMaxPagesToFetch(500);
+        imageConfig.setMaxPagesToFetch(500);
 
         PageFetcher pageFetcherHtml = new PageFetcher(htmlConfig);
         PageFetcher pageFetcherImage = new PageFetcher(imageConfig);
